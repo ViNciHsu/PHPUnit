@@ -4,31 +4,44 @@ use PHPUnit\Framework\TestCase;
 use \App\Models\User;
 class UserTest extends TestCase
 {
+    protected $user;
+
+    /* setUp() is gonna run before each of your test so
+        freshen everything up here and then it just means
+        you have less code to write in each of your tests
+    */
+    public function setUp(): void
+    {
+//        var_dump('1');
+        $this->user = new User;
+    }
+
+    /** @test */
     public function testThatWeCanGetTheFirstName()
     {
-        $user = new User;
+//        $user = new User;
 
-        $user->setFirstName('Billy');
+        $this->user->setFirstName('Billy');
 
-        $this->assertEquals($user->getFirstName(), 'Billy');
+        $this->assertEquals($this->user->getFirstName(), 'Billy');
     }
 
     public function testThatWeCanGetTheLastName()
     {
-        $user = new User;
+//        $user = new User;
 
-        $user->setLastName('Garrett');
+        $this->user->setLastName('Garrett');
 
-        $this->assertEquals($user->getLastName(), 'Garrett');
+        $this->assertEquals($this->user->getLastName(), 'Garrett');
     }
 
     public function testFullNameIsReturned()
     {
-        $user = new User;
-        $user->setFirstName('Billy');
-        $user->setLastName('Garrett');
+//        $user = new User;
+        $this->user->setFirstName('Billy');
+        $this->user->setLastName('Garrett');
 
-        $this->assertEquals($user->getFullName(),'Billy Garrett');
+        $this->assertEquals($this->user->getFullName(),'Billy Garrett');
     }
 
 
