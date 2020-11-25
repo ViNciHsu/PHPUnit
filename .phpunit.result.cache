@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":240:{a:2:{s:7:"defects";a:2:{s:32:"SampleTest::testTrueAssertToTrue";i:3;s:38:"UserTest::testThatWeCanGetTheFirstName";i:3;}s:5:"times";a:2:{s:32:"SampleTest::testTrueAssertToTrue";d:0.007;s:38:"UserTest::testThatWeCanGetTheFirstName";d:0.002;}}}
